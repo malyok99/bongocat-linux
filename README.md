@@ -4,8 +4,6 @@ A real-time animated Bongo Cat overlay that reacts to your keystrokes globally -
 
 Built for **Linux (Wayland)**, with direct keyboard event capturing via **libevdev**, and visuals rendered using **SDL2** + **SDL2_image**.
 
-> Bongo Cat responds to left half keys, right half keys, both halfs pressed at the same time, and spacebar prdesses.
-
 Tested on Fedora GNOME and NixOS Hyprland; expected to work on other Wayland compositors.
 
 ## 🔧 Requirements
