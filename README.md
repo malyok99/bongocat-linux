@@ -1,10 +1,12 @@
-# BongoCat Global Keyboard Visualizer (Wayland, Linux)
+# BongoCat Keyboard Visualizer (Wayland, Linux)
 
 A real-time animated Bongo Cat overlay that reacts to your keystrokes globally - typing along as you use your keyboard
 
-Built for **Linux (Wayland)** using **Fedora GNOME**, with direct keyboard event capturing via **libevdev**, and visuals rendered using **SDL2** + **SDL2_image**.
+Built for **Linux (Wayland)**, with direct keyboard event capturing via **libevdev**, and visuals rendered using **SDL2** + **SDL2_image**.
 
-> Bongo Cat responds to left half keys, right half keys, both halfs pressed at the same time, and spacebar presses.
+> Bongo Cat responds to left half keys, right half keys, both halfs pressed at the same time, and spacebar prdesses.
+
+Tested on Fedora GNOME and NixOS Hyprland; expected to work on other Wayland compositors.
 
 ## 🔧 Requirements
 
@@ -16,10 +18,7 @@ Built for **Linux (Wayland)** using **Fedora GNOME**, with direct keyboard event
 ## 📦 Dependencies & Build
 
 ```bash
-# Install dependencies with
-sudo dnf install SDL2 SDL2_image libevdev
-
-# And build with
+# Build with
 gcc catkeys.c -o catkeys $(pkg-config --cflags --libs sdl2 SDL2_image libevdev) -pthread
 ```
 
@@ -40,10 +39,7 @@ cat /proc/bus/input/devices
 
 ## 🛑 Notes
 
-- This **must** be run as **root** to access raw keyboard input.
-- Only tested under **Wayland** on **Fedora GNOME**.
-- If it lags or stutters, verify SDL2 is using hardware acceleration.
-- Make sure only one instance reads from the input device at a time.
+- This **must** be run as **sudo** to access raw keyboard input.
 
 ## ⚔️ Developer Notes
 
@@ -57,6 +53,6 @@ Core logic breakdown:
 
 ## 🧠 Why?
 
-Because there is no working alternatives for GNOME Wayland...
+Because there is no working alternatives for Wayland...
 
 
