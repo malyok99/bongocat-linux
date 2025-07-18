@@ -6,6 +6,8 @@ Built for **Linux (Wayland)**, with direct keyboard event capturing via **libevd
 
 Tested on Fedora GNOME and NixOS Hyprland; expected to work on other Wayland compositors.
 
+![](examples/example1.gif)
+
 ## 🔧 Requirements
 
 - SDL2
