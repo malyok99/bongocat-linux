@@ -37,7 +37,7 @@ sudo libinput list-devices
 cat /proc/bus/input/devices
 ```
 
-## 🛑 Notes
+## 🛑 Warnings
 
 - This **must** be run as **sudo** to access raw keyboard input.
 
