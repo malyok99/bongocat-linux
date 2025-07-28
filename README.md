@@ -4,7 +4,7 @@ A real-time animated Bongo Cat overlay that reacts to your keystrokes globally -
 
 Built for **Linux (Wayland)**, with direct keyboard event capturing via **libevdev**, and visuals rendered using **SDL2** + **SDL2_image**.
 
-Tested on Fedora GNOME and NixOS Hyprland; expected to work on other Wayland compositors.
+Expected to work on other Wayland compositors.
 
 ![](examples/example1.gif)
 
@@ -19,13 +19,13 @@ Tested on Fedora GNOME and NixOS Hyprland; expected to work on other Wayland com
 
 ```bash
 # Build with
-gcc catkeys.c -o catkeys $(pkg-config --cflags --libs sdl2 SDL2_image libevdev) -pthread
+gcc main.c -o bongocat $(pkg-config --cflags --libs sdl2 SDL2_image libevdev) -pthread
 ```
 
 ## 🚀 Running
 
 ```bash
-sudo ./catkeys /dev/input/eventX
+sudo ./bongocat /dev/input/eventX
 # Replace /dev/input/eventX with your actual keyboard input device
 ```
 
